@@ -846,12 +846,30 @@ a:hover {
 
 .skills-list {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  flex-wrap: wrap; /* Allows wrapping to the next line if necessary */
+  justify-content: center; /* Centers the items horizontally */
+  align-items: center; /* Centers the items vertically */
+  gap: 15px; /* Adds space between items */
+  list-style: none; /* Removes default bullet points */
+  padding: 0;
+  margin: 0;
 }
 
 .skills-list li {
-  width: 7rem;
+  display: flex; /* Ensures the child image stays within the flex context */
+  justify-content: center;
+  align-items: center;
+  width: 80px; /* Adjust size as needed */
+  height: 80px; /* Makes each skill item uniform */
+  border: 1px solid #ddd; /* Optional: border for better visual */
+  border-radius: 8px; /* Rounds the corners */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow */
+  background-color: #f9f9f9; /* Light background for contrast */
+}
+.skills-list li img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain; /* Ensures images fit properly */
 }
 /*--------------------------------------------------------------
 # Services
